@@ -14,14 +14,22 @@
     </ul>
 
     <input>
-    <button onclick="add()">adicionar</button>
+    <button  onkeydown="add()" onclick="add()" on>adicionar</button>
 
     <script>
-        function add()
+        function add() {
         const ul = document.querySelector("ul")
         const input = document.querySelector("input")
         const tarefa = input.value
-        console.log(input)
+        const li = document.createElement("li")
+        li.innerText = tarefa
+        ul.appendChild(li)
+        input.value = ""       
+
+
+
+        console.log(li)
+    }
 
         
 
